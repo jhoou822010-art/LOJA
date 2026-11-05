@@ -7,12 +7,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-</head>
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1769e0"><link rel="apple-touch-icon" href="icon-192.png"></head>
 <body>
   <header class="site-header"><div class="container nav-wrap">
     <a class="brand" href="index.html"><span class="brand-mark">CR</span><span><strong id="brandName">Compras Rápidas</strong><small>ANDRADE</small></span></a>
     <nav class="main-nav" aria-label="Navegação"><a href="#ofertas">Ofertas</a><a href="#categorias">Categorias</a><a href="#novidades">Novidades</a></nav>
-    <a class="admin-link" href="admin.html">Área administrativa <span>↗</span></a>
+    <button class="install-button hidden" data-install-app>Instalar app</button><a class="admin-link" href="admin.html">Área administrativa <span>↗</span></a>
   </div></header>
   <main>
     <section class="hero"><div class="container hero-grid"><div class="hero-copy"><span class="eyebrow">CURADORIA INTELIGENTE DE OFERTAS</span><h1>Encontre o que vale a pena comprar.</h1><p>Produtos úteis, preços acompanhados e acesso direto às melhores ofertas — sem perder tempo procurando.</p><a class="button button-primary" href="#ofertas">Explorar ofertas <span>→</span></a></div><div class="hero-card"><div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div><div id="featuredCarousel" class="featured-carousel"><div class="hero-card-content"><span>SELEÇÃO DA SEMANA</span><strong>Achados que<br>fazem diferença.</strong><small>Atualizados pela equipe Andrade</small></div></div><div class="hero-lines"></div></div></div></section>
@@ -21,7 +21,8 @@
     <section id="categorias" class="category-strip"><div class="container"><div class="section-heading compact"><div><span class="eyebrow">NAVEGUE POR INTERESSE</span><h2>Escolha uma categoria</h2></div></div><div id="categoryTiles" class="category-tiles"></div></div></section>
     <section id="novidades" class="section container"><div class="section-heading"><div><span class="eyebrow">ACABOU DE CHEGAR</span><h2>Novidades e ofertas</h2></div></div><div id="latestGrid" class="product-grid"></div></section>
   </main>
-  <footer class="site-footer"><div class="container footer-wrap"><div class="brand footer-brand"><span class="brand-mark">CR</span><span><strong>Compras Rápidas</strong><small>ANDRADE</small></span></div><p>Ofertas selecionadas para deixar sua compra mais simples.</p><span>© <span id="year"></span> Compras Rápidas Andrade</span></div></footer>
+  <div id="privacyModal" class="modal" aria-hidden="true"><div class="modal-backdrop" data-close-privacy></div><article class="modal-card privacy-card"><button class="modal-close" data-close-privacy aria-label="Fechar">×</button><span class="eyebrow">TRANSPARÊNCIA</span><h2>Política de privacidade</h2><div id="privacyText" class="privacy-text"></div></article></div>
+  <footer class="site-footer"><div class="container footer-wrap"><div class="brand footer-brand"><span class="brand-mark">CR</span><span><strong>Compras Rápidas</strong><small>ANDRADE</small></span></div><p id="footerDescription">Ofertas selecionadas para deixar sua compra mais simples.</p><span>© <span id="year"></span> Compras Rápidas Andrade</span><button class="privacy-link" id="privacyLink" type="button">Política de privacidade</button></div></footer>
   <div id="productModal" class="modal" aria-hidden="true"><div class="modal-backdrop" data-close-modal></div><article class="modal-card"><button class="modal-close" data-close-modal aria-label="Fechar">×</button><div id="modalContent"></div></article></div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase.js"></script><script src="script.js"></script>
-</body></html>
+<script src="pwa.js"></script></body></html>

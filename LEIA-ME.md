@@ -87,3 +87,18 @@ Em **Marca e banners**, selecione diretamente os arquivos do logotipo e do banne
 ## 14. Importar, exportar e agendar backup
 
 Na aba **Backup**, use **Exportar backup** para baixar um JSON, **Importar backup** para restaurar um arquivo JSON anterior e **Agendar backup** para definir frequência e horário. Como o GitHub Pages é estático, o download automático só acontece enquanto o painel estiver aberto; o agendamento fica salvo no Supabase.
+
+
+## 15. Instalar como aplicativo
+
+A loja inclui suporte a PWA. No Chrome ou Edge, abra a URL publicada e use o botão **Instalar app** quando ele aparecer. No celular, também é possível abrir o menu do navegador e escolher **Adicionar à tela inicial** ou **Instalar aplicativo**. O ícone abre a interface como um app, mas o painel ainda precisa de internet para autenticar no Supabase, carregar produtos e salvar alterações.
+
+
+## 16. Se o botão Salvar configurações não funcionar
+
+Execute o `supabase.sql` atualizado no Supabase, especialmente as alterações da tabela `site_settings`. O painel agora mostra as mensagens em português. Se aparecer uma mensagem de permissão, confirme se o usuário está em `app_admins` e se os buckets `site-assets` e `product-images` foram criados.
+
+
+## 17. Rodapé e política de privacidade
+
+Em **Marca e banners**, edite **Descrição do rodapé** e **Política de privacidade**. A descrição aparece no rodapé; a política fica acessível pelo link **Política de privacidade** e abre em uma janela na própria loja. Escreva um texto adequado ao seu negócio e, se necessário, revise-o com orientação jurídica.
