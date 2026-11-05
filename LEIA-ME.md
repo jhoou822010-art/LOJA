@@ -63,3 +63,27 @@ Depois de entrar em `admin.html`, abra a aba **Backup** e clique em **Baixar bac
 ## 10. Prévia interativa
 
 O arquivo `demo.html` é uma demonstração independente para testar a interface sem Supabase. Ele usa dados fictícios e `localStorage` do navegador. A demo não substitui a versão de produção: os dados adicionados nela não são enviados ao Supabase.
+
+## Guia de publicação no GitHub
+
+Para enviar os arquivos pelo navegador e ativar o GitHub Pages, consulte o arquivo `GUIA-GITHUB.md`.
+
+
+## 11. Carrossel de ofertas em destaque
+
+Para colocar um produto no carrossel principal, abra o painel, edite o produto e marque **Produto em destaque**. Todos os produtos ativos marcados dessa forma entram no carrossel, que troca automaticamente a cada cinco segundos e também possui setas e indicadores. Não há limite artificial de produtos destacados; quanto mais produtos forem marcados, mais itens ficarão disponíveis na sequência.
+
+
+## 12. Imagens nas categorias
+
+No painel administrativo, abra **Categorias**, crie ou edite uma categoria e selecione uma imagem opcional. Ela será enviada ao bucket `product-images` do Supabase Storage e aparecerá no card da categoria na vitrine.
+
+
+## 13. Alterar cores da loja
+
+Em **Marca e banners**, selecione diretamente os arquivos do logotipo e do banner no celular ou computador. Use também os seletores de cor para alterar a cor dos botões, a cor principal da vitrine e o fundo da página. Clique em **Salvar configurações**. As cores ficam salvas no Supabase e são aplicadas na loja pública.
+
+
+## 14. Importar, exportar e agendar backup
+
+Na aba **Backup**, use **Exportar backup** para baixar um JSON, **Importar backup** para restaurar um arquivo JSON anterior e **Agendar backup** para definir frequência e horário. Como o GitHub Pages é estático, o download automático só acontece enquanto o painel estiver aberto; o agendamento fica salvo no Supabase.
